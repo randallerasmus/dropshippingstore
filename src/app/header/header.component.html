@@ -50,3 +50,34 @@
     <button mat-menu-item (click)="logout()">Logout</button>
   </mat-menu>
 </mat-toolbar>
+<mat-sidenav-container class="container">
+  <mat-sidenav #sidenav mode="side" [opened]="true">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/platform/wagers" routerLinkActive="active-link">
+        <mat-icon style="margin: 2px 0px -5px 0px">attach_money</mat-icon>
+        <span style="padding: 10px 10px 10px 12px">Wagers</span>
+      </a>
+      <a mat-list-item routerLink="/platform/dashboard" routerLinkActive="active-link">
+        <mat-icon style="margin: 2px 0px -5px 0px">home</mat-icon>
+        <span style="padding: 10px 10px 10px 12px">Dashboard</span>
+      </a>
+      <a mat-list-item routerLink="/platform/users" routerLinkActive="active-link">
+        <mat-icon style="margin: 2px 0px -5px 0px">people</mat-icon>
+        <span style="padding: 10px 10px 10px 12px">Users</span>
+      </a>
+      <a mat-list-item routerLink="/platform/profile" routerLinkActive="active-link">
+        <mat-icon style="margin: 2px 0px -5px 0px">person</mat-icon>
+        <span style="padding: 10px 10px 10px 12px">Profile</span>
+      </a>
+      <a mat-list-item routerLink="/platform/settings" routerLinkActive="active-link">
+        <mat-icon style="margin: 2px 0px -5px 0px">settings</mat-icon>
+        <span style="padding: 10px 10px 10px 12px">Settings</span>
+      </a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
