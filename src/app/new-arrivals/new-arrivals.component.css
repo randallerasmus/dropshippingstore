@@ -1,0 +1,11 @@
+.slideshow-image {
+  width: 1920px;
+  height: 900px;
+  object-fit: cover;
+}
+
+.slideshow-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}

@@ -26,6 +26,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import {MatRadioModule} from "@angular/material/radio";
+import { ProductsComponent } from './products/products.component';
+import { TodayDealsComponent } from './today-deals/today-deals.component';
+import { NewArrivalsComponent } from './new-arrivals/new-arrivals.component';
 
 
 @NgModule({
@@ -36,6 +39,9 @@ import {MatRadioModule} from "@angular/material/radio";
     ContactUsComponent,
     HeaderComponent,
     FooterComponent,
+    ProductsComponent,
+    TodayDealsComponent,
+    NewArrivalsComponent,
   ],
     imports: [
         BrowserModule,
