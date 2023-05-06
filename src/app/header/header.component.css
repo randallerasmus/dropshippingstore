@@ -26,3 +26,45 @@
 .toolbar-menu {
   color: black;
 }
+
+.toolbar-menu.sticky-header {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.toolbar-menu + mat-toolbar {
+  margin-top: 64px; /* Adjust the margin-top value according to the height of your sticky header */
+}
+
+.toolbar-two-menu.sticky-header {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.toolbar-two-menu + mat-toolbar {
+  margin-top: 64px; /* Adjust the margin-top value according to the height of your sticky header */
+}
+
+.flex-container {
+
+  display: flex;
+
+}
+
+.search-container {
+  padding-top: 21px;
+  justify-content: center;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-form-field .mat-input-element {
+  font-size: 18px; /* Adjust the font size as desired */
+  padding: 10px; /* Adjust the padding as desired */
+}

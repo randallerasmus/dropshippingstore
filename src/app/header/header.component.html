@@ -1,25 +1,30 @@
-<mat-toolbar class="toolbar-menu">
+<mat-toolbar class="toolbar-menu" [ngClass]="{'sticky-header': isSticky}">
   <span class="admin-dashboard" routerLink="/platform/dashboard" routerLinkActive="active-link">
-     <img src="assets/images/logos/rsz_1byteservices2.png" width="120px" height="30px">
+    <img src="assets/images/logos/rsz_1byteservices2.png" width="120px" height="30px">
   </span>
   <span class="spacer"></span>
 
+  <div class="flex-container">
+    <div class="search-container">
+      <mat-form-field appearance="outline">
+        <mat-icon matPrefix>search</mat-icon>
+        <input matInput placeholder="Search" />
+      </mat-form-field>
+    </div>
+  </div>
 
   <div class="icon-container">
     <button mat-icon-button class="icon-button" aria-label="Notifications">
       <mat-icon>notifications</mat-icon>
     </button>
-    <button mat-icon-button class="icon-button" aria-label="Messages"
-            routerLink="/platform/inbox" routerLinkActive="active-link">
-      <mat-icon >message</mat-icon>
+    <button mat-icon-button class="icon-button" aria-label="Messages" routerLink="/platform/inbox" routerLinkActive="active-link">
+      <mat-icon>message</mat-icon>
     </button>
-    <button mat-icon-button class="icon-button" aria-label="Settings"
-            routerLink="/platform/settings" routerLinkActive="active-link" >
+    <button mat-icon-button class="icon-button" aria-label="Settings" routerLink="/platform/settings" routerLinkActive="active-link">
       <mat-icon>settings</mat-icon>
     </button>
     <button mat-icon-button class="icon-button" aria-label="Account" [matMenuTriggerFor]="profileMenu">
-
-
+      <mat-icon>account_circle</mat-icon>
     </button>
   </div>
   <mat-menu #profileMenu="matMenu">
@@ -27,16 +32,17 @@
     <button mat-menu-item (click)="logout()">Logout</button>
   </mat-menu>
 </mat-toolbar>
-<mat-toolbar color="warn">
-  <button mat-icon-button (click)="toggleSidenav()" class="menu-icon" aria-label="Toggle " #sidenav>
+
+<mat-toolbar class="toolbar-two-menu" color="warn" [ngClass]="{'sticky-header': isSticky}">
+  <button mat-icon-button (click)="toggleSidenav()" class="menu-icon" aria-label="Toggle" #sidenav>
     <mat-icon>menu</mat-icon>
   </button>
   <div class="menu">
     <a routerLink="/newarrivals" style="padding: 15px">New Arrivals</a>
     <a routerLink="/todaydeals" style="padding: 15px">Todays Deals</a>
-    <a routerLink="/products"  style="padding: 15px">Products</a>
-    <a routerLink="/about-us"  style="padding: 15px">About Us</a>
-    <a routerLink="/contact-us"  style="padding: 15px">Contact Us</a>
+    <a routerLink="/products" style="padding: 15px">Products</a>
+    <a routerLink="/about-us" style="padding: 15px">About Us</a>
+    <a routerLink="/contact-us" style="padding: 15px">Contact Us</a>
   </div>
   <span class="spacer"></span>
   <mat-menu #profileMenu="matMenu">
