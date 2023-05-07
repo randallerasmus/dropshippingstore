@@ -1,0 +1,28 @@
+.contact-card {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-form-field {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+button {
+  align-self: flex-end;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.example-card {
+  padding: 50px;
+  max-width: 100%;
+}

@@ -14,17 +14,11 @@
   </div>
 
   <div class="icon-container">
-    <button mat-icon-button class="icon-button" aria-label="Notifications">
-      <mat-icon>notifications</mat-icon>
-    </button>
     <button mat-icon-button class="icon-button" aria-label="Messages" routerLink="/platform/inbox" routerLinkActive="active-link">
-      <mat-icon>message</mat-icon>
-    </button>
-    <button mat-icon-button class="icon-button" aria-label="Settings" routerLink="/platform/settings" routerLinkActive="active-link">
-      <mat-icon>settings</mat-icon>
+      <mat-icon>mail_outline</mat-icon>
     </button>
     <button mat-icon-button class="icon-button" aria-label="Account" [matMenuTriggerFor]="profileMenu">
-      <mat-icon>account_circle</mat-icon>
+      <mat-icon>account_circle_outline</mat-icon>
     </button>
   </div>
   <mat-menu #profileMenu="matMenu">
@@ -45,6 +39,17 @@
     <a routerLink="/contact-us" style="padding: 15px">Contact Us</a>
   </div>
   <span class="spacer"></span>
+  <div class="icon-container">
+    <button mat-icon-button class="icon-button" aria-label="Notifications">
+      <mat-icon>home</mat-icon>
+    </button>
+    <button mat-icon-button class="icon-button" aria-label="Messages" routerLink="/platform/inbox" routerLinkActive="active-link">
+      <mat-icon>favorite_outline</mat-icon>
+    </button>
+    <button mat-icon-button class="icon-button" aria-label="Settings" routerLink="/platform/settings" routerLinkActive="active-link">
+      <mat-icon>add_shopping_cart</mat-icon>
+    </button>
+  </div>
   <mat-menu #profileMenu="matMenu">
     <a mat-menu-item routerLink="/platform/profile" routerLinkActive="active-link">Profile</a>
     <button mat-menu-item (click)="logout()">Logout</button>

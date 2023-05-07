@@ -68,5 +68,57 @@
   transition: background-color .5s ease-in; }
 
 .slider-content {
-  padding:5px;
+  padding:50px 50px 50px 50px;
+}
+
+.heading {
+  text-align: center !important;
+}
+
+.product-card {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-container {
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.example-card {
+  width: calc(25% - 20px);
+  margin-bottom: 20px;
+}
+
+.example-card-one {
+width: 600px;
+  height: 600px;
+}
+
+.example-card .hover{
+  width: calc(25% - 20px);
+  margin-bottom: 20px;
+}
+
+.zoom-container {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.zoom-container:hover {
+  transform: scale(1.1);
+}
+
+.zoom-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
