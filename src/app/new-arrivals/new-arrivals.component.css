@@ -75,6 +75,17 @@
   text-align: center !important;
 }
 
+.h5-container {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h5-container h5 {
+  margin: 0 10px;
+}
+
 .product-card {
   width: 300px;
   margin-bottom: 20px;
@@ -87,6 +98,13 @@ mat-card-actions {
 
 .card-container {
   padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.trending-container {
+  padding: 2% 19% 1% 17%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
