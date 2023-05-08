@@ -23,7 +23,9 @@ export class HeaderComponent implements OnInit{
   }
 
   toggleSidenav() {
+    console.log('hello')
     if (this.sidenav) {
+      console.log('are you here')
       this.sidenav.toggle();
     }
   }

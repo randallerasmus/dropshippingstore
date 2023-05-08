@@ -10,7 +10,7 @@ import {NewArrivalsComponent} from "./new-arrivals/new-arrivals.component";
 
 const routes: Routes = [
 
-  { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: '', redirectTo: '/newarrivals', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'newarrivals', component: NewArrivalsComponent },
   { path: 'todaydeals', component: TodayDealsComponent },

@@ -29,6 +29,8 @@ import {MatRadioModule} from "@angular/material/radio";
 import { ProductsComponent } from './products/products.component';
 import { TodayDealsComponent } from './today-deals/today-deals.component';
 import { NewArrivalsComponent } from './new-arrivals/new-arrivals.component';
+import {MatGridListModule} from "@angular/material/grid-list";
+import { MyAccountComponent } from './dashboard/my-account/my-account.component';
 
 
 @NgModule({
@@ -42,6 +44,7 @@ import { NewArrivalsComponent } from './new-arrivals/new-arrivals.component';
     ProductsComponent,
     TodayDealsComponent,
     NewArrivalsComponent,
+    MyAccountComponent,
   ],
     imports: [
         BrowserModule,
@@ -68,6 +71,7 @@ import { NewArrivalsComponent } from './new-arrivals/new-arrivals.component';
         ReactiveFormsModule,
         MatSelectModule,
         MatRadioModule,
+        MatGridListModule,
     ],
   providers: [],
   bootstrap: [AppComponent]
