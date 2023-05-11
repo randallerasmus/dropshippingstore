@@ -125,3 +125,28 @@ section {
 .contact-page-form form {
   padding: 20px 15px 0;
 }
+
+.breadcrumb__wrap {
+  background-color: #fbfbfb;
+  padding: 1.125rem;
+  border-radius: 0.1875rem; }
+
+.breadcrumb__list {
+  list-style: none;
+  padding: 1%;
+  margin: 0;
+  word-wrap: break-word; }
+.breadcrumb__list > li {
+  display: inline-block; }
+.breadcrumb__list > li > a {
+  color: #a0a0a0;
+  font-size: 13px;
+  font-weight: 700;
+  transition: color 0.5s; }
+.breadcrumb__list > li > a:hover {
+  color: #333333; }
+.breadcrumb__list > li.is-marked > a {
+  color: #333333; }
+.breadcrumb__list > li.has-separator:after {
+  content: '/';
+  margin: 0 16px; }
