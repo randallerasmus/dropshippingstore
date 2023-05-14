@@ -150,3 +150,19 @@ section {
 .breadcrumb__list > li.has-separator:after {
   content: '/';
   margin: 0 16px; }
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.form-container {
+  grid-column: 1;
+}
+
+.contact-page-map {
+  grid-column: 2;
+}
+
+
