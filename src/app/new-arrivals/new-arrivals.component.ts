@@ -42,15 +42,7 @@ export class NewArrivalsComponent implements OnInit{
     }, 5000); // Adjust the interval time (in milliseconds) as desired
   }
 
-  stopSlideshow() {
-    clearInterval(this.interval);
-  }
-
   showNextImage() {
     this.currentIndex = (this.currentIndex + 1) % this.images.length;
-  }
-
-  showPreviousImage() {
-    this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
   }
 }
