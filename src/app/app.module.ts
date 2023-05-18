@@ -21,7 +21,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
-import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -38,7 +37,6 @@ import {FlexLayoutModule} from "@angular/flex-layout";
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutUsComponent,
     ContactUsComponent,
     HeaderComponent,
     FooterComponent,
