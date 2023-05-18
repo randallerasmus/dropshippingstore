@@ -53,7 +53,7 @@
   font-size: 1.375rem; }
 
 .shop-now-link {
-  padding: 18px 53px;
+  padding: 15px 30px;
   font-size: 0.75rem;
   position: relative;
   transition: background 0.3s;
@@ -141,4 +141,49 @@ width: 600px;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .slideshow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.slideshow-text {
+  /* Add your slideshow text styles here */
+}
+
+.slider-content {
+  /* Add your slider content styles here */
+  display: flex; /* Use flexbox to create a horizontal layout */
+  justify-content: center; /* Center align the content horizontally */
+  align-items: center; /* Center align the content vertically */
+}
+
+.slider-content span {
+  /* Add your span styles here */
+  margin-right: 10px; /* Add some space between spans */
+}
+
+.slider-content a {
+  /* Add your link styles here */
+}
+
+/* Responsive styles for smartphones */
+@media screen and (max-width: 480px) {
+  .slider-content {
+    flex-wrap: nowrap; /* Prevent content from wrapping to the next line */
+    overflow-x: auto; /* Add horizontal scroll if necessary */
+  }
+
+  .slider-content span {
+    white-space: nowrap; /* Prevent span text from wrapping */
+  }
 }
