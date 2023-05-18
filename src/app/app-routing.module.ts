@@ -6,6 +6,8 @@ import {ProductsComponent} from "./products/products.component";
 import {TodayDealsComponent} from "./today-deals/today-deals.component";
 import {NewArrivalsComponent} from "./new-arrivals/new-arrivals.component";
 import {QuickLookComponent} from "./products/quick-look/quick-look.component";
+import {CartComponent} from "./cart/cart.component";
+import {WishlistComponent} from "./wishlist/wishlist.component";
 
 
 const routes: Routes = [
@@ -17,6 +19,8 @@ const routes: Routes = [
   { path: 'products', component: ProductsComponent },
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'quick-look', component: QuickLookComponent },
+  { path: 'cart', component: CartComponent },
+  { path: 'wishlist', component: WishlistComponent },
 ]
 
 @NgModule({
