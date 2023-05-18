@@ -31,6 +31,7 @@ import { TodayDealsComponent } from './today-deals/today-deals.component';
 import { NewArrivalsComponent } from './new-arrivals/new-arrivals.component';
 import {MatGridListModule} from "@angular/material/grid-list";
 import { MyAccountComponent } from './dashboard/my-account/my-account.component';
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 
 @NgModule({
@@ -54,6 +55,8 @@ import { MyAccountComponent } from './dashboard/my-account/my-account.component'
         MatTableModule,
         MatFormFieldModule,
         MatDialogModule,
+        MatGridListModule,
+        FlexLayoutModule,
         MatToolbarModule,
         MatButtonModule,
         MatIconModule,
