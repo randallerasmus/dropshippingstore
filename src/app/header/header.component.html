@@ -3,7 +3,7 @@
     <div style="display: flex; align-items: center;">
       <mat-icon>mail_outline</mat-icon>
       <div style="font-size: 12px;">info@denimvibe.co.za</div>
-      <mat-icon>phone</mat-icon>
+      <i class="fas fa-phone-volume"></i>
       <span style="font-size: 12px;">+27813355425</span>
     </div>
     <div class="collapse navbar-collapse" id="topNavBar">
@@ -14,11 +14,14 @@
           <mat-icon>home_outline</mat-icon>
         </button>
         <button mat-icon-button class="icon-button" aria-label="Cart" style="order: 3;">
-          <mat-icon>shopping_cart</mat-icon>
+          <i class="fas fa-shopping-bag">
+            <span class="total-item-round">2</span>
+          </i>
         </button>
         <button mat-icon-button class="icon-button" aria-label="Favorite" style="order: 2;">
           <mat-icon>favorite_outline</mat-icon>
         </button>
+
       </div>
     </div>
   </div>
@@ -40,6 +43,7 @@
           <a routerLink="/products" style="padding: 15px;color: black">Products</a>
           <a routerLink="/about-us" style="padding: 15px;color: black">About Us</a>
           <a routerLink="/contact-us" style="padding: 15px;color: black">Contact Us</a>
+
         </li>
       </ul>
       <form class="d-flex" role="search">
