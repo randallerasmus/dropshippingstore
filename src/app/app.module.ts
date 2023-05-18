@@ -34,7 +34,6 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 import { QuickLookComponent } from './products/quick-look/quick-look.component';
 import { CartComponent } from './cart/cart.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
-import { SignUpComponent } from './account/sign-up/sign-up.component';
 import { RegisterComponent } from './account/register/register.component';
 import { PasswordRecoveryComponent } from './account/password-recovery/password-recovery.component';
 import { SignInComponent } from './account/sign-in/sign-in.component';
@@ -54,7 +53,6 @@ import { SignInComponent } from './account/sign-in/sign-in.component';
     QuickLookComponent,
     CartComponent,
     WishlistComponent,
-    SignUpComponent,
     RegisterComponent,
     PasswordRecoveryComponent,
     SignInComponent,
