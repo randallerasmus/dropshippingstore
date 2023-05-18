@@ -31,6 +31,7 @@ import { NewArrivalsComponent } from './new-arrivals/new-arrivals.component';
 import {MatGridListModule} from "@angular/material/grid-list";
 import { MyAccountComponent } from './dashboard/my-account/my-account.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
+import { QuickLookComponent } from './products/quick-look/quick-look.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     TodayDealsComponent,
     NewArrivalsComponent,
     MyAccountComponent,
+    QuickLookComponent,
   ],
     imports: [
         BrowserModule,

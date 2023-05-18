@@ -5,6 +5,7 @@ import {ContactUsComponent} from "./contact-us/contact-us.component";
 import {ProductsComponent} from "./products/products.component";
 import {TodayDealsComponent} from "./today-deals/today-deals.component";
 import {NewArrivalsComponent} from "./new-arrivals/new-arrivals.component";
+import {QuickLookComponent} from "./products/quick-look/quick-look.component";
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'todaydeals', component: TodayDealsComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'contact-us', component: ContactUsComponent },
+  { path: 'quick-look', component: QuickLookComponent },
 ]
 
 @NgModule({
