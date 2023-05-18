@@ -32,6 +32,11 @@ import {MatGridListModule} from "@angular/material/grid-list";
 import { MyAccountComponent } from './dashboard/my-account/my-account.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import { QuickLookComponent } from './products/quick-look/quick-look.component';
+import { CartComponent } from './cart/cart.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
+import { RegisterComponent } from './account/register/register.component';
+import { PasswordRecoveryComponent } from './account/password-recovery/password-recovery.component';
+import { SignInComponent } from './account/sign-in/sign-in.component';
 
 
 @NgModule({
@@ -46,6 +51,11 @@ import { QuickLookComponent } from './products/quick-look/quick-look.component';
     NewArrivalsComponent,
     MyAccountComponent,
     QuickLookComponent,
+    CartComponent,
+    WishlistComponent,
+    RegisterComponent,
+    PasswordRecoveryComponent,
+    SignInComponent,
   ],
     imports: [
         BrowserModule,
