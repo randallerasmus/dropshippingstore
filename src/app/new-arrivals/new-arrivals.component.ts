@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 
 export interface Tile {
   color: string;
@@ -19,6 +19,10 @@ export class NewArrivalsComponent implements OnInit{
     // Add more image URLs here
   ];
 
+  @ViewChild('dropdownButton') dropdownButton!: ElementRef;
+  @ViewChild('dropdownContent') dropdownContent!: ElementRef;
+
+
   currentIndex = 0;
   interval: any;
   isImageResponsive = false;
@@ -36,6 +40,11 @@ export class NewArrivalsComponent implements OnInit{
     this.interval = setInterval(() => {
       this.showNextImage();
     }, 5000); // Adjust the interval time (in milliseconds) as desired
+  }
+
+  toggleDropdown() {
+    const contentDisplay = this.dropdownContent.nativeElement.style.display;
+    this.dropdownContent.nativeElement.style.display = contentDisplay === 'block' ? 'none' : 'block';
   }
 
   showNextImage() {
