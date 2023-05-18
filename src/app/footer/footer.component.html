@@ -1,24 +1,21 @@
-  <footer class="footer">
-    <div class="footer-space">
-    <div class="footer-row1 mat-elevation-z2">
-      <div class="footer-column">
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
         <h4>Contact-Us</h4>
-        <div class="outer-footer__content u-s-m-b-40">
-
+        <div class="outer-footer__content">
           <div class="outer-footer__text-wrap"><i class="fas fa-home"></i>
-
-            <span>20 Birkenhead str, Land En Zeezicht Somerset West, WC, SA</span></div>
+            <span>20 Birkenhead str, Land En Zeezicht Somerset West, WC, SA</span>
+          </div>
           <div class="outer-footer__text-wrap"><i class="fas fa-phone-volume"></i>
-
-            <span>(+27) 81 335 5 782</span></div>
+            <span>(+27) 81 335 5 782</span>
+          </div>
           <div class="outer-footer__text-wrap"><i class="far fa-envelope"></i>
-
             <span>randallerasmus1@gmail.com</span>
           </div>
-
         </div>
       </div>
-      <div class="footer-column">
+      <div class="col-md-3 col-sm-6">
         <h4>Information</h4>
         <p>Cart</p>
         <p>Account</p>
@@ -26,7 +23,7 @@
         <p>Finance</p>
         <p>Shop</p>
       </div>
-      <div class="footer-column">
+      <div class="col-md-3 col-sm-6">
         <h4>Our Company</h4>
         <p>About us</p>
         <p>Contact Us</p>
@@ -34,25 +31,31 @@
         <p>Delivery</p>
         <p>Store</p>
       </div>
-      <div class="footer-column">
+      <div class="col-md-3 col-sm-6">
         <h4>Join our Newsletter</h4>
-        <input type="radio" name="gender" value="male"> Male
-        <input type="radio" name="gender" value="female"> Female
-        <div class="col-md-6 col-sm-6 col-xs-12">
-          <div class="single-input-field">
-            <input type="text" placeholder="Subject" name="subject"/>
+        <div class="form-group">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" value="male" id="maleRadio">
+            <label class="form-check-label" for="maleRadio">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" value="female" id="femaleRadio">
+            <label class="form-check-label" for="femaleRadio">Female</label>
           </div>
         </div>
-    </div>
-
-    </div>
-
-    </div>
-
-      <div class="footer-row2">
-        <p>Copyrights © 2023 Randall Erasmus All Right Reserved</p>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Subject" name="subject">
+        </div>
       </div>
-
-  </footer>
-
-
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-row2">
+          <p class="text-center">Copyrights © 2023 Randall Erasmus All Right Reserved</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
