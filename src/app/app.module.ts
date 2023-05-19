@@ -38,6 +38,7 @@ import { RegisterComponent } from './account/register/register.component';
 import { PasswordRecoveryComponent } from './account/password-recovery/password-recovery.component';
 import { SignInComponent } from './account/sign-in/sign-in.component';
 import { AccountDashboardComponent } from './account/account-dashboard/account-dashboard.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 @NgModule({
@@ -58,6 +59,7 @@ import { AccountDashboardComponent } from './account/account-dashboard/account-d
     PasswordRecoveryComponent,
     SignInComponent,
     AccountDashboardComponent,
+    CheckoutComponent,
   ],
     imports: [
         BrowserModule,
