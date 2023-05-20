@@ -8,6 +8,10 @@ import {NewArrivalsComponent} from "./new-arrivals/new-arrivals.component";
 import {QuickLookComponent} from "./products/quick-look/quick-look.component";
 import {CartComponent} from "./cart/cart.component";
 import {WishlistComponent} from "./wishlist/wishlist.component";
+import {AccountDashboardComponent} from "./account/account-dashboard/account-dashboard.component";
+import {CheckoutComponent} from "./checkout/checkout.component";
+import {SignInComponent} from "./account/sign-in/sign-in.component";
+import {RegisterComponent} from "./account/register/register.component";
 
 
 const routes: Routes = [
@@ -20,7 +24,11 @@ const routes: Routes = [
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'quick-look', component: QuickLookComponent },
   { path: 'cart', component: CartComponent },
+  { path: 'register', component: RegisterComponent },
   { path: 'wishlist', component: WishlistComponent },
+  { path: 'account-dashboard', component: AccountDashboardComponent },
+  { path: 'checkout', component: CheckoutComponent },
+  { path: 'signin', component: SignInComponent },
 ]
 
 @NgModule({
