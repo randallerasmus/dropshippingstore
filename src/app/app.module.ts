@@ -39,6 +39,14 @@ import { PasswordRecoveryComponent } from './account/password-recovery/password-
 import { SignInComponent } from './account/sign-in/sign-in.component';
 import { AccountDashboardComponent } from './account/account-dashboard/account-dashboard.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { ProfileComponent } from './account/account-dashboard/profile/profile.component';
+import { AddressBookComponent } from './account/account-dashboard/address-book/address-book.component';
+import { TrackMyOrderComponent } from './account/account-dashboard/track-my-order/track-my-order.component';
+import { MyOrdersComponent } from './account/account-dashboard/my-orders/my-orders.component';
+import { MyPaymentOptionsComponent } from './account/account-dashboard/my-payment-options/my-payment-options.component';
+import { ReturnsCancellationsComponent } from './account/account-dashboard/returns-cancellations/returns-cancellations.component';
+import { AddressAddComponent } from './account/account-dashboard/address-book/address-add/address-add.component';
+import { AddressEditComponent } from './account/account-dashboard/address-book/address-edit/address-edit.component';
 
 
 @NgModule({
@@ -60,6 +68,14 @@ import { CheckoutComponent } from './checkout/checkout.component';
     SignInComponent,
     AccountDashboardComponent,
     CheckoutComponent,
+    ProfileComponent,
+    AddressBookComponent,
+    TrackMyOrderComponent,
+    MyOrdersComponent,
+    MyPaymentOptionsComponent,
+    ReturnsCancellationsComponent,
+    AddressAddComponent,
+    AddressEditComponent,
   ],
     imports: [
         BrowserModule,
