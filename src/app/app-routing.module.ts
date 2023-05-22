@@ -12,10 +12,14 @@ import {AccountDashboardComponent} from "./account/account-dashboard/account-das
 import {CheckoutComponent} from "./checkout/checkout.component";
 import {SignInComponent} from "./account/sign-in/sign-in.component";
 import {RegisterComponent} from "./account/register/register.component";
+import {MyOrdersComponent} from "./account/account-dashboard/my-orders/my-orders.component";
+import {TrackMyOrderComponent} from "./account/account-dashboard/track-my-order/track-my-order.component";
+import {MyPaymentOptionsComponent} from "./account/account-dashboard/my-payment-options/my-payment-options.component";
+import {AddressBookComponent} from "./account/account-dashboard/address-book/address-book.component";
+import {ProfileComponent} from "./account/account-dashboard/profile/profile.component";
 
 
 const routes: Routes = [
-
   { path: '', redirectTo: '/newarrivals', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'newarrivals', component: NewArrivalsComponent },
@@ -26,10 +30,24 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'wishlist', component: WishlistComponent },
-  { path: 'account-dashboard', component: AccountDashboardComponent },
+  {
+    path: 'dashboard',
+    component: AccountDashboardComponent,
+    children: [
+      { path: '', redirectTo: '', pathMatch: 'full' },
+      { path: 'my-orders', component: MyOrdersComponent },
+      { path: 'track-order', component: TrackMyOrderComponent },
+      { path: 'my-payment-options', component: MyPaymentOptionsComponent },
+      { path: 'address-book', component: AddressBookComponent },
+
+    ]
+  },
+  { path: 'my-payment-options', component: MyPaymentOptionsComponent },
   { path: 'checkout', component: CheckoutComponent },
   { path: 'signin', component: SignInComponent },
-]
+  { path: 'profile', component: ProfileComponent },
+];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -47,6 +47,7 @@ import { MyPaymentOptionsComponent } from './account/account-dashboard/my-paymen
 import { ReturnsCancellationsComponent } from './account/account-dashboard/returns-cancellations/returns-cancellations.component';
 import { AddressAddComponent } from './account/account-dashboard/address-book/address-add/address-add.component';
 import { AddressEditComponent } from './account/account-dashboard/address-book/address-edit/address-edit.component';
+import { AccountHeaderComponent } from './account-header/account-header.component';
 
 
 @NgModule({
@@ -76,6 +77,7 @@ import { AddressEditComponent } from './account/account-dashboard/address-book/a
     ReturnsCancellationsComponent,
     AddressAddComponent,
     AddressEditComponent,
+    AccountHeaderComponent,
   ],
     imports: [
         BrowserModule,
