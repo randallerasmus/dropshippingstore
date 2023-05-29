@@ -38,7 +38,7 @@ const routes: Routes = [
       { path: 'my-orders', component: MyOrdersComponent },
       { path: 'track-order', component: TrackMyOrderComponent },
       { path: 'my-payment-options', component: MyPaymentOptionsComponent },
-      { path: 'address-book', component: AddressBookComponent },
+
 
     ]
   },
@@ -46,6 +46,7 @@ const routes: Routes = [
   { path: 'checkout', component: CheckoutComponent },
   { path: 'signin', component: SignInComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'address-book', component: AddressBookComponent },
 ];
 
 
