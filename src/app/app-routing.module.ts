@@ -34,18 +34,15 @@ const routes: Routes = [
     path: 'dashboard',
     component: AccountDashboardComponent,
     children: [
-      { path: 'my-orders', component: MyOrdersComponent },
-
       { path: 'my-payment-options', component: MyPaymentOptionsComponent },
-
-
     ]
   },
   { path: 'my-payment-options', component: MyPaymentOptionsComponent },
   { path: 'checkout', component: CheckoutComponent },
+  { path: 'myorders', component: MyOrdersComponent },
   { path: 'signin', component: SignInComponent },
   { path: 'profile', component: ProfileComponent },
-  { path: 'address-book', component: AddressBookComponent },
+  { path: 'addressbook', component: AddressBookComponent },
   { path: 'trackmyorder', component: TrackMyOrderComponent },
 ];
 
