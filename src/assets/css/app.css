@@ -3365,10 +3365,7 @@ input::-ms-clear {
 .dash__pad-3 {
   padding: 26px; }
 
-.dash__f-list {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
+
   .dash__f-list > li {
     padding: 4px 0; }
     .dash__f-list > li > a {
@@ -3383,10 +3380,6 @@ input::-ms-clear {
       align-items: center;
   -ms-flex-pack: justify;
       justify-content: space-between; }
-
-.dash-active {
-  font-weight: 600;
-  color: #000000; }
 
 .dash__w-list {
   margin: 0;
