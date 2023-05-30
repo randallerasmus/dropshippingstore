@@ -34,9 +34,8 @@ const routes: Routes = [
     path: 'dashboard',
     component: AccountDashboardComponent,
     children: [
-      { path: '', redirectTo: '', pathMatch: 'full' },
       { path: 'my-orders', component: MyOrdersComponent },
-      { path: 'track-order', component: TrackMyOrderComponent },
+
       { path: 'my-payment-options', component: MyPaymentOptionsComponent },
 
 
@@ -47,6 +46,7 @@ const routes: Routes = [
   { path: 'signin', component: SignInComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'address-book', component: AddressBookComponent },
+  { path: 'trackmyorder', component: TrackMyOrderComponent },
 ];
 
 
