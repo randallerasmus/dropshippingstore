@@ -48,6 +48,7 @@ import { ReturnsCancellationsComponent } from './account/account-dashboard/retur
 import { AddressAddComponent } from './account/account-dashboard/address-book/address-add/address-add.component';
 import { AddressEditComponent } from './account/account-dashboard/address-book/address-edit/address-edit.component';
 import { AccountHeaderComponent } from './account-header/account-header.component';
+import {AboutUsComponent} from "./about-us/about-us.component";
 
 
 @NgModule({
@@ -58,6 +59,7 @@ import { AccountHeaderComponent } from './account-header/account-header.componen
     HeaderComponent,
     FooterComponent,
     ProductsComponent,
+    AboutUsComponent,
     TodayDealsComponent,
     NewArrivalsComponent,
     MyAccountComponent,
