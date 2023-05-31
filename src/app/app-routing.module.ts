@@ -17,6 +17,9 @@ import {TrackMyOrderComponent} from "./account/account-dashboard/track-my-order/
 import {MyPaymentOptionsComponent} from "./account/account-dashboard/my-payment-options/my-payment-options.component";
 import {AddressBookComponent} from "./account/account-dashboard/address-book/address-book.component";
 import {ProfileComponent} from "./account/account-dashboard/profile/profile.component";
+import {
+  ReturnsCancellationsComponent
+} from "./account/account-dashboard/returns-cancellations/returns-cancellations.component";
 
 
 const routes: Routes = [
@@ -30,18 +33,13 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'wishlist', component: WishlistComponent },
-  {
-    path: 'dashboard',
-    component: AccountDashboardComponent,
-    children: [
-      { path: 'my-payment-options', component: MyPaymentOptionsComponent },
-    ]
-  },
-  { path: 'my-payment-options', component: MyPaymentOptionsComponent },
+  { path: 'dashboard', component: AccountDashboardComponent},
+  { path: 'mypaymentoptions', component: MyPaymentOptionsComponent },
   { path: 'checkout', component: CheckoutComponent },
   { path: 'myorders', component: MyOrdersComponent },
   { path: 'signin', component: SignInComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'returnscancellations', component: ReturnsCancellationsComponent },
   { path: 'addressbook', component: AddressBookComponent },
   { path: 'trackmyorder', component: TrackMyOrderComponent },
 ];
