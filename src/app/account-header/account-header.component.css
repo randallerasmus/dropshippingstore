@@ -4,7 +4,9 @@
   list-style: none;
 }
 
-.dash-active {
-  font-weight: 600;
+.dash__f-list li a.active {
+  /* Add your desired styles for the active state here */
+  font-weight: bold;
   color: #000000;
+  /* Add any other styles you want to apply */
 }
