@@ -35,6 +35,12 @@
   width: 100%;
 }
 
+.nav-item a.active {
+  font-weight: bold;
+  color: black;
+  /* Add any other styles you want to apply */
+}
+
 .toolbar-menu + mat-toolbar {
   margin-top: 64px; /* Adjust the margin-top value according to the height of your sticky header */
 }
