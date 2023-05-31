@@ -20,6 +20,7 @@ import {ProfileComponent} from "./account/account-dashboard/profile/profile.comp
 import {
   ReturnsCancellationsComponent
 } from "./account/account-dashboard/returns-cancellations/returns-cancellations.component";
+import {AboutUsComponent} from "./about-us/about-us.component";
 
 
 const routes: Routes = [
@@ -28,7 +29,8 @@ const routes: Routes = [
   { path: 'newarrivals', component: NewArrivalsComponent },
   { path: 'todaydeals', component: TodayDealsComponent },
   { path: 'products', component: ProductsComponent },
-  { path: 'contact-us', component: ContactUsComponent },
+  { path: 'contactus', component: ContactUsComponent },
+  { path: 'aboutus', component: AboutUsComponent },
   { path: 'quick-look', component: QuickLookComponent },
   { path: 'cart', component: CartComponent },
   { path: 'register', component: RegisterComponent },
