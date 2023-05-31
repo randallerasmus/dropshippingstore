@@ -655,7 +655,9 @@ body {
 .breadcrumb__wrap {
   background-color: #fbfbfb;
   padding: 1.125rem;
-  border-radius: 0.1875rem; }
+  border-radius: 0.1875rem;
+  width: 100%;
+}
 
 .breadcrumb__list {
   list-style: none;
