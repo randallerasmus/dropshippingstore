@@ -15,7 +15,7 @@ export class NewArrivalsComponent implements OnInit{
   images = [
     'assets/images/logos/homeSlide2.jpg',
     'assets/images/logos/homeSlide6.jpg',
-    'assets/images/logos/homeSlide8.jpg',
+    'assets/images/logos/homeSlide8.PNG',
     // Add more image URLs here
   ];
 
