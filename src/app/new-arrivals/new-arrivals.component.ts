@@ -15,7 +15,7 @@ export class NewArrivalsComponent implements OnInit{
   images = [
     'assets/images/logos/homeSlide2.jpg',
     'assets/images/logos/homeSlide6.jpg',
-    'assets/images/logos/homeSlide8.jpg',
+    'assets/images/logos/homeSlide8.PNG',
     // Add more image URLs here
   ];
 
@@ -27,10 +27,6 @@ export class NewArrivalsComponent implements OnInit{
   interval: any;
   isImageResponsive = false;
 
-  longText = `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog
-  from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
-  originally bred for hunting.`;
-
   ngOnInit() {
     this.startSlideshow();
     this.checkImageResponsive();
@@ -40,11 +36,6 @@ export class NewArrivalsComponent implements OnInit{
     this.interval = setInterval(() => {
       this.showNextImage();
     }, 5000); // Adjust the interval time (in milliseconds) as desired
-  }
-
-  toggleDropdown() {
-    const contentDisplay = this.dropdownContent.nativeElement.style.display;
-    this.dropdownContent.nativeElement.style.display = contentDisplay === 'block' ? 'none' : 'block';
   }
 
   showNextImage() {
