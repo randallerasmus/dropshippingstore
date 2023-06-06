@@ -49,6 +49,7 @@ import { AddressAddComponent } from './account/account-dashboard/address-book/ad
 import { AddressEditComponent } from './account/account-dashboard/address-book/address-edit/address-edit.component';
 import { AccountHeaderComponent } from './account-header/account-header.component';
 import {AboutUsComponent} from "./about-us/about-us.component";
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 
 
 @NgModule({
@@ -80,6 +81,7 @@ import {AboutUsComponent} from "./about-us/about-us.component";
     AddressAddComponent,
     AddressEditComponent,
     AccountHeaderComponent,
+    AdminPanelComponent,
   ],
     imports: [
         BrowserModule,
