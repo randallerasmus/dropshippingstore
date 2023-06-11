@@ -1,303 +1,447 @@
-<section>
-  <header>
-    <nav class="rad-navigation">
-      <div class="rad-logo-container">
-        <a href="#" class="rad-logo"><i class=" fa fa-recycle"></i> Radar</a>
-        <a href="#" class="rad-toggle-btn pull-right"><i class="fa fa-bars"></i></a>
-      </div>
-      <a href="#" class="rad-logo-hidden">Radar</a>
-      <div class="rad-top-nav-container">
-        <a href="" class="brand-icon"><i class="fa fa-recycle"></i></a>
-        <ul class="pull-right links">
-          <li class="rad-dropdown no-color">
-            <a class="rad-menu-item" href="#"><img class="rad-list-img sm-img" src="https://lh4.googleusercontent.com/-GXmmnYTuWkg/AAAAAAAAAAI/AAAAAAAAAAA/oK6DEDS7grM/w56-h56/photo.jpg" alt="me" /></a>
-            <ul class="rad-dropmenu-item sm-menu">
-              <li class="rad-notification-item">
-                <a class="rad-notification-content lg-text" href="#"><i class="fa fa-edit"></i> My Profile</a>
-              </li>
-              <li class="rad-notification-item">
-                <a class="rad-notification-content lg-text" href="#"><i class="fa fa-power-off"></i> Sign out</a>
-              </li>
-            </ul>
-          </li>
-          <li class="rad-dropdown"><a class="rad-menu-item" href="#"><i class="fa fa-cog"></i></a>
-            <ul class="rad-dropmenu-item rad-settings">
-              <li class="rad-dropmenu-header"><a href="#">Settings</a></li>
-              <li class="rad-notification-item text-left">
-                <div class="pull-left"><i class="fa fa-link"></i></div>
-                <div class="pull-right">
-                  <label class="rad-chk-pin pull-right">
-                    <input type="checkbox" /><span></span></label>
+
+<c-card class="mb-4">
+  <c-card-body>
+    <c-row>
+      <c-col sm="5">
+        <h4 class="card-title mb-0" id="traffic">Traffic</h4>
+        <div class="small text-medium-emphasis">January - December 2021</div>
+      </c-col>
+      <c-col class="d-none d-md-block" sm="7">
+        <button cButton class="float-end" color="primary">
+          <svg cIcon name="cilCloudDownload"></svg>
+        </button>
+        <form [formGroup]="trafficRadioGroup">
+          <c-button-group class="float-end me-3" role="group">
+            <input
+              class="btn-check"
+              formControlName="trafficRadio"
+              type="radio"
+              value="Day"
+            />
+            <label
+              (click)="setTrafficPeriod('Day')"
+              cButton
+              cFormCheckLabel
+              color="secondary"
+              variant="outline"
+            >Day</label>
+
+            <input
+              class="btn-check"
+              formControlName="trafficRadio"
+              type="radio"
+              value="Month"
+            />
+            <label
+              (click)="setTrafficPeriod('Month')"
+              cButton
+              cFormCheckLabel
+              color="secondary"
+              variant="outline"
+            >Month</label>
+
+            <input
+              class="btn-check"
+              formControlName="trafficRadio"
+              type="radio"
+              value="Year"
+            />
+            <label
+              (click)="setTrafficPeriod('Year')"
+              cButton
+              cFormCheckLabel
+              color="secondary"
+              variant="outline"
+            >Year</label>
+          </c-button-group>
+        </form>
+      </c-col>
+    </c-row>
+    <c-chart
+      [data]="mainChart.data"
+      [height]="300"
+      [ngStyle]="{ 'marginTop.px': 40 }"
+      [options]="mainChart.options"
+      [type]="mainChart.type"
+    >
+      Main chart
+    </c-chart>
+  </c-card-body>
+  <c-card-footer>
+    <c-row class="text-center" [md]="5" [xs]="1">
+      <c-col class="mb-sm-2 mb-0">
+        <div class="text-medium-emphasis">Visits</div>
+        <strong>29.703 Users (40%)</strong>
+        <c-progress class="mt-2" thin>
+          <c-progress-bar color="success" value="40"></c-progress-bar>
+        </c-progress>
+      </c-col>
+      <c-col class="mb-sm-2 mb-0">
+        <div class="text-medium-emphasis">Unique</div>
+        <strong>24.093 Users (20%)</strong>
+        <c-progress class="mt-2" thin>
+          <c-progress-bar color="info" value="20"></c-progress-bar>
+        </c-progress>
+      </c-col>
+      <c-col class="mb-sm-2 mb-0">
+        <div class="text-medium-emphasis">Page views</div>
+        <strong>78.706 Views (60%)</strong>
+        <c-progress class="mt-2" thin>
+          <c-progress-bar color="warning" value="60"></c-progress-bar>
+        </c-progress>
+      </c-col>
+      <c-col class="mb-sm-2 mb-0">
+        <div class="text-medium-emphasis">New Users</div>
+        <strong>22.123 Users (80%)</strong>
+        <c-progress class="mt-2" thin>
+          <c-progress-bar color="danger" value="80"></c-progress-bar>
+        </c-progress>
+      </c-col>
+      <c-col class="mb-sm-2 mb-0">
+        <div class="text-medium-emphasis">Bounce Rate</div>
+        <strong>Average Rate (40.15%)</strong>
+        <c-progress class="mt-2" thin>
+          <c-progress-bar value="40"></c-progress-bar>
+        </c-progress>
+      </c-col>
+    </c-row>
+  </c-card-footer>
+</c-card>
+
+<app-widgets-brand [withCharts]="true"></app-widgets-brand>
+
+<c-row>
+  <c-col xs>
+    <c-card class="mb-4">
+      <c-card-header>Traffic {{ "&" }} Sales</c-card-header>
+      <c-card-body>
+        <c-row>
+          <c-col md="6" xl="6" xs="12">
+            <c-row>
+              <c-col sm="6">
+                <div
+                  class="border-start border-start-4 border-start-info py-1 px-3 mb-3"
+                >
+                  <div class="text-medium-emphasis small">New Clients</div>
+                  <div class="fs-5 fw-semibold">9,123</div>
                 </div>
-                <div class="rad-notification-body">
-                  <div class="lg-text">Change to Flat Theme</div>
-                  <div class="sm-text">Flattify it</div>
+              </c-col>
+              <c-col sm="6">
+                <div
+                  class="border-start border-start-4 border-start-danger py-1 px-3 mb-3"
+                >
+                  <div class="text-medium-emphasis small">
+                    Recurring Clients
+                  </div>
+                  <div class="fs-5 fw-semibold">22,643</div>
                 </div>
-              </li>
-              <li id="rad-color-opts" class="rad-notification-item text-left hide">
-                <div class="pull-left"><i class="fa fa-puzzle-piece"></i></div>
-                <div class="pull-right">
-                  <div class="rad-color-swatch">
-                    <label class="colors rad-bg-crimson">
-                      <input type="radio" name="color" value="crimson" />
-                    </label>
-                    <label class="colors rad-bg-teal">
-                      <input type="radio" name="color" value="teal" />
-                    </label>
-                    <label class="colors rad-bg-purple">
-                      <input type="radio" name="color" value="purple">
-                    </label>
-                    <label class="colors rad-bg-orange">
-                      <input type="radio" name="color" value="orange" />
-                    </label>
-                    <label class="colors rad-bg-twitter">
-                      <input type="radio" name="color" value="twitter" />
-                    </label>
-                  </div>
+              </c-col>
+            </c-row>
+
+            <hr class="mt-0" />
+
+            <div class="progress-group mb-4">
+              <div class="progress-group-prepend">
+                <span class="text-medium-emphasis small">Monday</span>
+              </div>
+              <div class="progress-group-bars">
+                <c-progress thin>
+                  <c-progress-bar color="info" value="34"></c-progress-bar>
+                </c-progress>
+                <c-progress thin>
+                  <c-progress-bar color="danger" value="78"></c-progress-bar>
+                </c-progress>
+              </div>
+            </div>
+            <div class="progress-group mb-4">
+              <div class="progress-group-prepend">
+                <span class="text-medium-emphasis small">Tuesday</span>
+              </div>
+              <div class="progress-group-bars">
+                <c-progress thin>
+                  <c-progress-bar color="info" value="56"></c-progress-bar>
+                </c-progress>
+                <c-progress thin>
+                  <c-progress-bar color="danger" value="94"></c-progress-bar>
+                </c-progress>
+              </div>
+            </div>
+            <div class="progress-group mb-4">
+              <div class="progress-group-prepend">
+                <span class="text-medium-emphasis small">Wednesday</span>
+              </div>
+              <div class="progress-group-bars">
+                <c-progress thin>
+                  <c-progress-bar color="info" value="12"></c-progress-bar>
+                </c-progress>
+                <c-progress thin>
+                  <c-progress-bar color="danger" value="67"></c-progress-bar>
+                </c-progress>
+              </div>
+            </div>
+            <div class="progress-group mb-4">
+              <div class="progress-group-prepend">
+                <span class="text-medium-emphasis small">Thursday</span>
+              </div>
+              <div class="progress-group-bars">
+                <c-progress thin>
+                  <c-progress-bar color="info" value="43"></c-progress-bar>
+                </c-progress>
+                <c-progress thin>
+                  <c-progress-bar color="danger" value="91"></c-progress-bar>
+                </c-progress>
+              </div>
+            </div>
+            <div class="progress-group mb-4">
+              <div class="progress-group-prepend">
+                <span class="text-medium-emphasis small">Friday</span>
+              </div>
+              <div class="progress-group-bars">
+                <c-progress thin>
+                  <c-progress-bar color="info" value="22"></c-progress-bar>
+                </c-progress>
+                <c-progress thin>
+                  <c-progress-bar color="danger" value="73"></c-progress-bar>
+                </c-progress>
+              </div>
+            </div>
+            <div class="progress-group mb-4">
+              <div class="progress-group-prepend">
+                <span class="text-medium-emphasis small">Saturday</span>
+              </div>
+              <div class="progress-group-bars">
+                <c-progress thin>
+                  <c-progress-bar color="info" value="53"></c-progress-bar>
+                </c-progress>
+                <c-progress thin>
+                  <c-progress-bar color="danger" value="82"></c-progress-bar>
+                </c-progress>
+              </div>
+            </div>
+            <div class="progress-group mb-4">
+              <div class="progress-group-prepend">
+                <span class="text-medium-emphasis small">Sunday</span>
+              </div>
+              <div class="progress-group-bars">
+                <c-progress thin>
+                  <c-progress-bar color="info" value="9"></c-progress-bar>
+                </c-progress>
+                <c-progress thin>
+                  <c-progress-bar color="danger" value="69"></c-progress-bar>
+                </c-progress>
+              </div>
+            </div>
+            <div class="legend text-center" ngPreserveWhitespaces>
+              <small>
+                <sup>
+                  <span class="badge badge-pill badge-sm bg-info">&nbsp;</span>
+                </sup>
+                <span>New clients</span>
+                &nbsp;&nbsp;
+                <sup>
+                  <span class="badge badge-pill badge-sm bg-danger">&nbsp;</span>
+                </sup>
+                <span>Recurring clients</span>
+              </small>
+            </div>
+          </c-col>
+
+          <c-col md="6" xl="6" xs="12">
+            <c-row>
+              <c-col sm="6">
+                <div class="border-start border-start-4 border-start-warning py-1 px-3 mb-3">
+                  <div class="text-medium-emphasis small">Page views</div>
+                  <div class="fs-5 fw-semibold">78,623</div>
                 </div>
-                <div class="rad-notification-body">
-                  <div class="lg-text">Choose a color</div>
-                  <div class="sm-text">Make it colorful</div>
+              </c-col>
+              <c-col sm="6">
+                <div class="border-start border-start-4 border-start-success py-1 px-3 mb-3">
+                  <div class="text-medium-emphasis small">Organic</div>
+                  <div class="fs-5 fw-semibold">49,123</div>
                 </div>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <ul class="pull-right links">
-          <li>
-            <a class="rad-menu-item" href="#"><i class="fa fa-comment-o"><span class="rad-menu-badge rad-bg-success">0</span></i></a>
-          </li>
-          <li class="rad-dropdown"><a class="rad-menu-item" href="#"><i class="fa fa-envelope-o"><span class="rad-menu-badge rad-bg-primary">23</span></i></a>
-            <ul class="rad-dropmenu-item">
-              <li class="rad-dropmenu-header"><a href="#">Your Notifications</a></li>
-              <li class="rad-notification-item text-left">
-                <a class="rad-notification-content" href="#">
-                  <div class="pull-left"><i class="fa fa-html5 fa-2x"></i>
-                  </div>
-                  <div class="rad-notification-body">
-                    <div class="lg-text">Introduction to fetch()</div>
-                    <div class="sm-text">The fetch API</div>
-                  </div>
-                </a>
-              </li>
-              <li class="rad-notification-item text-left">
-                <a class="rad-notification-content" href="#">
-                  <div class="pull-left"><i class="fa fa-bitbucket fa-2x"></i>
-                  </div>
-                  <div class="rad-notification-body">
-                    <div class="lg-text">Check your BitBucket</div>
-                    <div class="sm-text">Last Chance</div>
-                  </div>
-                </a>
-              </li>
-              <li class="rad-notification-item text-left">
-                <a class="rad-notification-content" href="#">
-                  <div class="pull-left"><i class="fa fa-google fa-2x"></i>
-                  </div>
-                  <div class="rad-notification-body">
-                    <div class="lg-text">Google Account</div>
-                    <div class="sm-text">sathishlxg@gmail.com</div>
-                  </div>
-                </a>
-              </li>
-              <li class="rad-dropmenu-footer"><a href="#">See all notifications</a></li>
-            </ul>
-          </li>
-          <li class="rad-dropdown"><a class="rad-menu-item" href="#"><i class="fa fa-bell-o"><span class="rad-menu-badge">49</span></i></a>
-            <ul class="rad-dropmenu-item">
-              <li class="rad-dropmenu-header"><a href="#">Your Alerts</a></li>
-              <li class="rad-notification-item text-left">
-                <a class="rad-notification-content" href="#">
-                  <div class="pull-left"><i class="fa fa-html5 fa-2x"></i>
-                  </div>
-                  <div class="rad-notification-body">
-                    <div class="lg-text">Introduction to fetch()</div>
-                    <div class="sm-text">The fetch API</div>
-                    <em class="pull-right sm-text"><i class="fa fa-clock-o"></i> 2 sec ago</em>
-                  </div>
-                </a>
-              </li>
-              <li class="rad-notification-item text-left">
-                <a class="rad-notification-content" href="#">
-                  <div class="pull-left"><i class="fa fa-bitbucket fa-2x"></i>
-                  </div>
-                  <div class="rad-notification-body">
-                    <div class="lg-text">Check your BitBucket</div>
-                    <div class="sm-text">Last Chance</div>
-                    <em class="pull-right sm-text"><i class="fa fa-clock-o"></i> 49 mins ago</em>
-                  </div>
-                </a>
-              </li>
-              <li class="rad-notification-item text-left">
-                <a class="rad-notification-content" href="#">
-                  <div class="pull-left"><i class="fa fa-google fa-2x"></i>
-                  </div>
-                  <div class="rad-notification-body">
-                    <div class="lg-text">Google Account</div>
-                    <div class="sm-text">sathishlxg@gmail.com</div>
-                    <em class="pull-right sm-text"><i class="fa fa-clock-o"></i> 2 days ago</em>
-                  </div>
-                </a>
-              </li>
-              <li class="rad-dropmenu-footer"><a href="#">See all alerts</a></li>
-            </ul>
-          </li>
-          <!--<li class="rad-dropdown"><a class="rad-menu-item" href="#"><i class="fa fa-cog"></i></a>
-              <ul class="rad-dropmenu-item rad-settings">
-                  <li class="rad-dropmenu-header"><a href="#">Settings</a></li>
-                  <li class="rad-notification-item text-left">
-                      <div class="pull-left"><i class="fa fa-link"></i></div>
-                      <div class="pull-right"><label class="rad-chk-pin pull-right">
-                        <input type="checkbox"/><span></span></label></div>
-                      <div class="rad-notification-body">
-                          <div class="lg-text">Change to Flat Theme</div>
-                          <div class="sm-text">Flattify it</div>
-                      </div>
-                  </li>
-                  <li id="rad-color-opts" class="rad-notification-item text-left hide">
-                      <div class="pull-left"><i class="fa fa-puzzle-piece"></i></div>
-                      <div class="pull-right">
-                        <div class="rad-color-swatch">
-                          <label class="colors rad-bg-crimson rad-option-selected"><input type="radio" checked name="color" value="crimson"/></label>
-                          <label class="colors rad-bg-teal"><input type="radio" name="color" value="teal"/></label>
-                          <label class="colors rad-bg-orange"><input type="radio" name="color" value="orange"/></label>
-                        </div>
-                       </div>
-                      <div class="rad-notification-body">
-                          <div class="lg-text">Choose a color</div>
-                          <div class="sm-text">Make it colorful</div>
-                      </div>
-                  </li>
-              </ul>
-          </li>
-          <li class="rad-dropdown">
-              <a class="rad-menu-item" href="#"><img class="rad-list-img sm-img" src="https://lh4.googleusercontent.com/-GXmmnYTuWkg/AAAAAAAAAAI/AAAAAAAAAAA/oK6DEDS7grM/w56-h56/photo.jpg" alt="me" /></a>
-              <ul class="rad-dropmenu-item sm-menu">
-                  <li class="rad-notification-item">
-                      <a class="rad-notification-content lg-text" href="#"><i class="fa fa-edit"></i> My Profile</a>
-                  </li>
-                  <li class="rad-notification-item">
-                      <a class="rad-notification-content lg-text" href="#"><i class="fa fa-power-off"></i> Sign out</a>
-                  </li>
-              </ul>
-          </li>-->
-        </ul>
-      </div>
-    </nav>
-  </header>
-</section>
-<aside>
-  <nav class="rad-sidebar rad-nav-min">
-    <ul>
-      <li>
-        <a href="#" class="inbox">
-          <i class="fa fa-dashboard"><span class="icon-bg rad-bg-success"></span></i>
-          <span class="rad-sidebar-item">Dashboard</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa fa-bar-chart-o">
-            <span class="icon-bg rad-bg-danger"></span>
-          </i>
-          <span class="rad-sidebar-item">Ticket status</span>
-        </a>
-      </li>
-      <li><a href="#" class="snooz"><i class="fa fa-line-chart"><span class="icon-bg rad-bg-primary"></span></i><span class="rad-sidebar-item">Call trends</span></a></li>
-      <li><a href="#" class="done"><i class="fa fa-area-chart"><span class="icon-bg rad-bg-warning"></span></i><span class="rad-sidebar-item">Heat maps</span></a></li>
-      <li>
-        <a href="#">
-          <i class="fa fa-wrench"><span class="icon-bg rad-bg-violet"></span></i>
-          <span class="rad-sidebar-item">Settings</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-</aside>
-<main>
-  <section>
-    <div class="rad-body-wrapper rad-nav-min">
-      <div class="container-fluid">
-        <rad-dashboard-app>
-          <header class="rad-page-title">
-            <button class="btn" ng-click="save()">
-              <i class="fa fa-save"></i>Save Dashboard</button>
-            <button class="btn" ng-click="addPanel({})">
-              <i class="fa fa-plus"></i>Add</button>
-            <h1>Dashboard</h1>
-            <small class="md-txt">Welcome Sathish,
-              <a href="#" target="_blank">
-                <i class="fa fa-map-marker rad-txt-danger"></i> California</a>
-            </small>
-          </header>
-          <rad-dashboard-grid></rad-dashboard-grid>
-        </rad-dashboard-app>
-      </div>
-    </div>
-  </section>
-</main>
+              </c-col>
+            </c-row>
 
-<script type="text/ng-template" id="radDashboardGrid.html">
-  <div gridster="gridsterOptions">
-    <div class="chart-wrapper" gridster-item="item" ng-repeat="item in widgets">
-      <rad-panel></rad-panel>
-    </div>
-  </div>
-</script>
+            <hr class="mt-0" />
 
-<script type="text/ng-template" id="radPanel.html">
-  <div class="panel panel-default gridster-item-resizable-handler">
-    <div class="panel-heading">
-      <h3 class="panel-title">{{item.name}}
-        <ul class="rad-panel-action">
-          <li><i class="fa fa-chevron-down"></i></li>
-          <li><i class="fa fa-rotate-right" ng-click="refresh(item)"></i></li>
-          <li><i class="fa fa-cog" ng-click="updatePanel(item)"></i></li>
-          <li><i class="fa fa-close" ng-click="remove(item)"></i></li>
-          <ul>
-      </h3>
-    </div>
-    <div class="panel-body">
-      <div class="rad-chart">
-        <nvd3 options='item.chart' data='data' api="item.chart.api"></nvd3>
-      </div>
-    </div>
-  </div>
-</script>
+            <div class="progress-group mb-4">
+              <div class="progress-group-header">
+                <svg cIcon class="icon icon-lg me-2" name="cilUser"></svg>
+                <span>Male</span>
+                <span class="ms-auto font-semibold">43%</span>
+              </div>
+              <div class="progress-group-bars">
+                <c-progress thin>
+                  <c-progress-bar color="warning" value="43"></c-progress-bar>
+                </c-progress>
+              </div>
+            </div>
+            <div class="progress-group mb-5">
+              <div class="progress-group-header">
+                <svg cIcon class="icon icon-lg me-2" name="cilUserFemale"></svg>
+                <span>Female</span>
+                <span class="ms-auto font-semibold">37%</span>
+              </div>
+              <div class="progress-group-bars">
+                <c-progress thin>
+                  <c-progress-bar color="warning" value="37"></c-progress-bar>
+                </c-progress>
+              </div>
+            </div>
 
-<script type="text/ng-template" id="settings.html">
-  <div class="panel-heading"><h3 class="panel-title">Settings
-    <ul class="rad-panel-action"><li><i class="fa fa-close" ng-click="cancel()"></i></li><ul>
-  </h3></div>
-  <div class="panel-body">
-    <div class="form-group">
-      <label for="panelName">Name</label>
-      <input id="panelName" type="text" class="form-control" ng-model="panel.name"/>
-    </div>
-    <div class="form-group">
-      <label for="vizType">Visualization type</label>
-      <select id="vizType" class="form-control" ng-model="panel.vizType">
-        <option value="">Select a viz</option>
-        <option value="lineChart">Line</option>
-        <option value="areaChart">Area</option>
-        <option value="discreteBarChart">Bar</option>
-        <option value="pieChart">Pie</option>
-        <option value="map">Map</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="xKey">x Axis</label>
-      <input id="xKey" type="text" class="form-control" ng-model="panel.xKey"/>
-    </div>
-    <div class="form-group">
-      <label for="yKey">y Axis</label>
-      <input id="yKey" type="text" class="form-control" ng-model="panel.yKey"/>
-    </div>
-  </div>
-  <div class="panel-footer text-right">
-    <button class="btn btn-primary" type="button" ng-click="ok()">Save</button>
-    <button class="btn btn-danger" type="button" ng-click="cancel()">Cancel</button>
-  </div>
-</script>
-
-
+            <div class="progress-group">
+              <div class="progress-group-header">
+                <svg cIcon class="icon icon-lg me-2" name="cibGoogle"></svg>
+                <span>Organic Search</span>
+                <span class="ms-auto font-semibold">
+                  191,235 <span class="text-medium-emphasis small">(56%)</span>
+                </span>
+              </div>
+              <div class="progress-group-bars">
+                <c-progress thin>
+                  <c-progress-bar color="success" value="56"></c-progress-bar>
+                </c-progress>
+              </div>
+            </div>
+            <div class="progress-group">
+              <div class="progress-group-header">
+                <svg cIcon class="icon icon-lg me-2" name="cibFacebook"></svg>
+                <span>Facebook</span>
+                <span class="ms-auto font-semibold">
+                  51,223 <span class="text-medium-emphasis small">(15%)</span>
+                </span>
+              </div>
+              <div class="progress-group-bars">
+                <c-progress thin>
+                  <c-progress-bar color="success" value="15"></c-progress-bar>
+                </c-progress>
+              </div>
+            </div>
+            <div class="progress-group">
+              <div class="progress-group-header">
+                <svg cIcon class="icon icon-lg me-2" name="cibTwitter"></svg>
+                <span>Twitter</span>
+                <span class="ms-auto font-semibold">
+                  37,564 <span class="text-medium-emphasis small">(11%)</span>
+                </span>
+              </div>
+              <div class="progress-group-bars">
+                <c-progress thin>
+                  <c-progress-bar color="success" value="11"></c-progress-bar>
+                </c-progress>
+              </div>
+            </div>
+            <div class="progress-group">
+              <div class="progress-group-header">
+                <svg cIcon class="icon icon-lg me-2" name="cibLinkedin"></svg>
+                <span>LinkedIn</span>
+                <span class="ms-auto font-semibold">
+                  27,319 <span class="text-medium-emphasis small">(8%)</span>
+                </span>
+              </div>
+              <div class="progress-group-bars">
+                <c-progress thin>
+                  <c-progress-bar color="success" value="8"></c-progress-bar>
+                </c-progress>
+              </div>
+            </div>
+            <div class="divider d-flex justify-content-center">
+              <button
+                cButton
+                class="text-muted btn-link"
+                color="transparent"
+                size="sm"
+                type="button"
+              >
+                <svg cIcon name="cil-options"></svg>
+              </button>
+            </div>
+          </c-col>
+        </c-row>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>
+<c-row>
+  <c-col xs>
+    <c-card class="mb-4">
+      <c-card-header>Users</c-card-header>
+      <c-card-body>
+        <table
+          [hover]="true"
+          [responsive]="true"
+          [striped]="true"
+          align="middle"
+          cTable
+          class="mb-0 border"
+        >
+          <thead cTableColor="light">
+          <tr>
+            <th class="text-center">
+              <svg cIcon name="cilPeople"></svg>
+            </th>
+            <th>User</th>
+            <th class="text-center">Country</th>
+            <th>Usage</th>
+            <th class="text-center">Payment Method</th>
+            <th>Activity</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let user of users; index as i">
+            <td class="text-center">
+              <c-avatar
+                size="md"
+                src="{{ user.avatar }}"
+                status="{{ user.status }}"
+              ></c-avatar>
+            </td>
+            <td>
+              <div>{{ user.name }}</div>
+              <div class="small text-medium-emphasis text-nowrap">
+                  <span>
+                    {{ user.state }} | Registered: {{ user.registered }}
+                  </span>
+              </div>
+            </td>
+            <td class="text-center">
+              <svg
+                cIcon
+                id="{{ user.country + user.name }}"
+                name="cif{{ user.country }}"
+                size="xl"
+                title="{{ user.country }}"
+              ></svg>
+            </td>
+            <td>
+              <div class="d-flex justify-content-between">
+                <div class="float-start">
+                  <strong>{{ user.usage }}%</strong>
+                </div>
+                <div class="float-end ms-1 text-nowrap">
+                  <small class="text-medium-emphasis">
+                    {{ user.period }}
+                  </small>
+                </div>
+              </div>
+              <c-progress thin>
+                <c-progress-bar
+                  [value]="user.usage"
+                  color="{{ user.color }}"
+                ></c-progress-bar>
+              </c-progress>
+            </td>
+            <td class="text-center">
+              <svg cIcon name="cibCc{{ user.payment }}" size="xl"></svg>
+            </td>
+            <td>
+              <div class="small text-medium-emphasis">Last login</div>
+              <div class="fw-semibold text-nowrap">{{ user.activity }}</div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>
