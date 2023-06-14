@@ -30,6 +30,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 
 export class AdminPanelComponent implements OnDestroy {
+
+  // url --> https://stackblitz.com/edit/angular-side-nav-dynamic-expansive-menu?file=app%2Fsidenav-responsive-example.ts
   displayedColumns: string[] = ['select', 'position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   selection = new SelectionModel<PeriodicElement>(true, []);
