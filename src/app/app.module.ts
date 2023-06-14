@@ -50,6 +50,7 @@ import { AddressEditComponent } from './account/account-dashboard/address-book/a
 import { AccountHeaderComponent } from './account-header/account-header.component';
 import {AboutUsComponent} from "./about-us/about-us.component";
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import {MatExpansionModule} from "@angular/material/expansion";
 
 
 @NgModule({
@@ -111,6 +112,7 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component';
         MatSelectModule,
         MatRadioModule,
         MatGridListModule,
+        MatExpansionModule,
     ],
   providers: [],
   bootstrap: [AppComponent]
