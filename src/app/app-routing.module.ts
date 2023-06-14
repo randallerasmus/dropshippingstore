@@ -21,6 +21,7 @@ import {
   ReturnsCancellationsComponent
 } from "./account/account-dashboard/returns-cancellations/returns-cancellations.component";
 import {AboutUsComponent} from "./about-us/about-us.component";
+import {AdminPanelComponent} from "./admin-panel/admin-panel.component";
 
 
 const routes: Routes = [
@@ -44,6 +45,7 @@ const routes: Routes = [
   { path: 'returnscancellations', component: ReturnsCancellationsComponent },
   { path: 'addressbook', component: AddressBookComponent },
   { path: 'trackmyorder', component: TrackMyOrderComponent },
+  { path: 'adminpanel', component: AdminPanelComponent },
 ];
 
 
