@@ -1,15 +1,9 @@
-a.menu-icon {
-  margin-right: 8px;
-}
-
+/*this space the icons to the right side*/
 .spacer {
   flex: 1 1 auto;
 }
 
-/*.spacer {*/
-/*  flex: 1;*/
-/*}*/
-
+/*space btw the icons*/
 .icon-button {
   margin-left: 8px;
 }
@@ -21,14 +15,11 @@ a.menu-icon {
 .content {
   padding: 16px;
 }
+
 .admin-dashboard {
   cursor: pointer;
 }
 
-.icon-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
+
 
 

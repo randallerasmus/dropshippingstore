@@ -43,7 +43,7 @@ export class AdminPanelComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.router.navigate(['/platform/profile']);
+
 
   }
 
