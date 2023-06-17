@@ -2,7 +2,7 @@
   <button mat-icon-button (click)="toggleSidenav()" class="menu-icon" aria-label="Toggle " #sidenav>
     <mat-icon>menu</mat-icon>
   </button>
-  <span class="admin-dashboard" routerLink="/platform/dashboard" routerLinkActive="active-link">
+  <span class="admin-dashboard" routerLink="/admin" routerLinkActive="active-link">
     Admin Dashboard
   </span>
   <span class="spacer"></span>
@@ -25,19 +25,19 @@
 <mat-sidenav-container class="container-sideNav">
   <mat-sidenav #sidenav mode="side" [opened]="true">
     <mat-nav-list>
-      <a mat-list-item routerLink="/platform/wagers" routerLinkActive="active-link">
+      <a mat-list-item routerLink="/platform/overview" routerLinkActive="active-link">
         <mat-icon style="margin: 2px 0px -5px 0px">dashboard</mat-icon>
         <span style="padding: 10px 10px 10px 12px">Overview</span>
       </a>
-      <a mat-list-item routerLink="/platform/dashboard" routerLinkActive="active-link">
+      <a mat-list-item routerLink="/platform/product-manage" routerLinkActive="active-link">
         <mat-icon style="margin: 2px 0px -5px 0px">add_box</mat-icon>
         <span style="padding: 10px 10px 10px 12px">Products</span>
       </a>
-      <a mat-list-item routerLink="/platform/users" routerLinkActive="active-link">
+      <a mat-list-item routerLink="/platform/sales" routerLinkActive="active-link">
         <mat-icon style="margin: 2px 0px -5px 0px">people</mat-icon>
         <span style="padding: 10px 10px 10px 12px">Sales</span>
       </a>
-      <a mat-list-item routerLink="/platform/profile" routerLinkActive="active-link">
+      <a mat-list-item routerLink="/platform/security" routerLinkActive="active-link">
         <mat-icon style="margin: 2px 0px -5px 0px">person</mat-icon>
         <span style="padding: 10px 10px 10px 12px">Security</span>
       </a>
@@ -46,7 +46,7 @@
         <span style="padding: 10px 10px 10px 12px">System Configuration</span>
       </a>
 
-      <a mat-list-item routerLink="/platform/logout" routerLinkActive="active-link">
+      <a mat-list-item routerLink="/newarrivals" routerLinkActive="active-link">
         <mat-icon style="margin: 2px 0px -5px 0px">logout</mat-icon>
         <span style="padding: 10px 10px 10px 12px">Logout</span>
       </a>
