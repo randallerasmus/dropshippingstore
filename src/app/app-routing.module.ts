@@ -22,6 +22,13 @@ import {
 } from "./account/account-dashboard/returns-cancellations/returns-cancellations.component";
 import {AboutUsComponent} from "./about-us/about-us.component";
 import {AdminPanelComponent} from "./admin-panel/admin-panel.component";
+import {OverviewComponent} from "./admin-panel/components/overview/overview.component";
+import {SalesComponent} from "./admin-panel/components/sales/sales.component";
+import {
+  SecurityPermissionsComponent
+} from "./admin-panel/components/security-permissions/security-permissions.component";
+import {SystemConfigComponent} from "./admin-panel/components/system-config/system-config.component";
+import {ProductManagementComponent} from "./admin-panel/components/product-management/product-management.component";
 
 
 const routes: Routes = [
@@ -45,7 +52,14 @@ const routes: Routes = [
   { path: 'returnscancellations', component: ReturnsCancellationsComponent },
   { path: 'addressbook', component: AddressBookComponent },
   { path: 'trackmyorder', component: TrackMyOrderComponent },
-  { path: 'adminpanel', component: AdminPanelComponent },
+  { path: 'adminpanel', component: AdminPanelComponent,
+    children: [
+      { path: 'overview', component: OverviewComponent },
+      { path: 'products', component: ProductManagementComponent },
+      { path: 'sales', component: SalesComponent },
+      { path: 'security', component: SecurityPermissionsComponent },
+      { path: 'systemconfig', component: SystemConfigComponent },
+    ]},
 ];
 
 

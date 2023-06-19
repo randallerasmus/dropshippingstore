@@ -51,6 +51,11 @@ import { AccountHeaderComponent } from './account-header/account-header.componen
 import {AboutUsComponent} from "./about-us/about-us.component";
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import {MatExpansionModule} from "@angular/material/expansion";
+import { OverviewComponent } from './admin-panel/components/overview/overview.component';
+import { SalesComponent } from './admin-panel/components/sales/sales.component';
+import { SecurityPermissionsComponent } from './admin-panel/components/security-permissions/security-permissions.component';
+import { SystemConfigComponent } from './admin-panel/components/system-config/system-config.component';
+import { ProductManagementComponent } from './admin-panel/components/product-management/product-management.component';
 
 
 @NgModule({
@@ -83,6 +88,11 @@ import {MatExpansionModule} from "@angular/material/expansion";
     AddressEditComponent,
     AccountHeaderComponent,
     AdminPanelComponent,
+    OverviewComponent,
+    SalesComponent,
+    SecurityPermissionsComponent,
+    SystemConfigComponent,
+    ProductManagementComponent,
   ],
     imports: [
         BrowserModule,
